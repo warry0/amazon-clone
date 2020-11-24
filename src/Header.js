@@ -41,7 +41,7 @@ function Header() {
                 </div> 
                 <div className="header__optionBasket">
                     <span className="header__optionLineTwo header__basketCount">
-                        300
+                        99
                     </span>
                     <ShoppingCartIcon fontSize='large' />
                 </div>
