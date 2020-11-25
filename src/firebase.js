@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "aminesite-a96b6.appspot.com",
   messagingSenderId: "265699412790",
   appId: "1:265699412790:web:607c91ca5cbb24556c8197",
-  measurementId: "G-RN1S77KW80"
+  measurementId: "G-RN1S77KW80",
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 

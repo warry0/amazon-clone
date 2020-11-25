@@ -21,17 +21,17 @@ function App() {
 
         dispatch({
           type: "Définir_l'utilisateur",
-          user: authUser
+          user: authUser,
         });
       } else {
         // l'utilisateur est déconnecté
         dispatch({
           type: "Définir_l'utilisateur",
-          user: null
-        })
+          user: null,
+        });
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     //BEM

@@ -9,10 +9,10 @@ import { auth } from "./firebase";
 function Header() {
   const [{ basket, user }] = useStateValue();
   const handleAuthenticaton = () => {
-    if (auth){
+    if (auth) {
       auth.signOut();
     }
-  }
+  };
 
   return (
     <div className="header">
@@ -28,12 +28,14 @@ function Header() {
         <SearchIcon className="header__searchIcon"></SearchIcon>
       </div>
       <div className="header__nav">
-        <Link to={!user && '/login'}>
+        <Link to={!user && "/login"}>
           <div onClick={handleAuthenticaton} className="header__option">
             <span className="header__optionLineOne">
-              Bonjour, {!user ? 'Identifiez-vous' : 'Bienvenue'}
+              Bonjour, {!user ? "Identifiez-vous" : "Bienvenue"}
             </span>
-            <span className="header__optionLineTow">{user ? 'Déconnexion' : 'Connexion'}</span>
+            <span className="header__optionLineTow">
+              {user ? "Déconnexion" : "Connexion"}
+            </span>
           </div>
         </Link>
         <div className="header__option">
