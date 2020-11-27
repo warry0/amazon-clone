@@ -9,12 +9,12 @@ const reducer = (state, action) => {
   console.log(action);
 
   switch (action.type) {
-    case "Ajouter au panier":
+    case "AJOUTER_AU_PANIER":
       return {
         ...state,
         basket: [...state.basket, action.item],
       };
-    case "REMOVE_FROM_BASKET":
+    case "RETIRER_DU_PANIER":
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
@@ -30,6 +30,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         basket: newBasket,
+      };
+    case "DEFINIR_UTILISATEUR":
+      return {
+        ...state,
+        user: action.user,
       };
     default:
       return state;
